@@ -20,3 +20,7 @@ jobs:
       run: pip install pytest
     - name: Run tests
       run: pytest
+    - name: Clean Python cache
+  run: |
+    find . -name "__pycache__" -type d -exec rm -r {} +
+    find . -name "*.pyc" -delete    
